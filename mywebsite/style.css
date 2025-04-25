@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Anek Odia", serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #FFF4F6;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+    font-family: "Agbalumo";
+    color: #CA004C;
+    
+    
+}
+
+.logo img {
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+.logo img:hover{
+    transform: scale(1.1);
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-right: 30px;
+}
+
+nav a:hover {
+    background-color: #ffd9d9;
+    color: #000;
+}
+nav a.active{
+    background-color: #ffbdbd;
+    color: #000;
+}
+
+/* Responsive Styles */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    padding: 5px 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        
+    }
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+        gap: 10px;
+    }
+    nav.active {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+        margin-top: 10px;
+    }
+}
+
+.hero {
+    background: url('hpbaner.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    height: 300px;
+    padding: 40px 20px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.hero::before {
+    content: ""; /* Adds content for the pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent black gradient overlay */
+    z-index: 1; /* Places the overlay above the background but below text */
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: "Agbalumo";
+    position: relative;
+    z-index: 2; /* Ensure text is above the overlay */
+}
+
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+
+    }
+    .hero {
+        padding: 80px 20px;
+    }
+}
+
+
+.welcome {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 30px; 
+    text-align: left;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    background-color: #f9f9f9; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+}
+
+.welcome img {
+    max-height:400px; 
+    width: auto;  
+    padding-left:140px;
+}
+
+.welcome h2 {
+    font-size: 2rem; 
+    color: #333; 
+    margin-bottom: 15px;
+    font-family: "Oswald", serif;
+
+}
+
+.welcome p {
+    max-width: 600px;
+    margin: 0 0 20px 0; 
+    line-height: 1.8;
+    color: #555; 
+    font-size: 1.1rem; 
+    font-family: "Anek Odia", serif;
+    
+}
+
+.welcome .shop-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #CA004C;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1rem; 
+    font-weight: bold; 
+    transition: background-color 0.3s ease; 
+    font-family: "Anek Odia",serif;
+}
+
+.welcome .shop-btn:hover {
+    background-color: #b52e6e; 
+}
+
+
+@media (max-width: 768px) {
+    .welcome {
+        flex-direction: column; 
+        text-align: center; 
+        padding: 30px 15px; 
+    }
+
+    .welcome img {
+        max-height: 200px; 
+        margin-bottom: 20px;
+    }
+
+    .welcome p {
+        max-width: 100%; 
+       
+        
+      }
+}
+footer {
+    background-color: #FFD3DB;
+    padding: 30px 20px; 
+    font-family: "Anek Odia", serif; 
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start; 
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+.contact-info, .links, .social-media {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px; 
+}
+
+.contact-info div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.contact-info i {
+    margin-right: 10px;
+}
+
+.links a, .social-media a {
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+    transition: color 0.3s ease; 
+    margin-top:10px ;
+
+}
+.links a:hover, .social-media a:hover{
+    color: #007bff;
+}
+
+.social-media {
+    flex-direction: row; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.social-media a {
+    font-size: 1.5rem;
+    margin: 0 10px;
+}
+.social-media p{
+    /* font-size: 0.9rem; */
+    margin: 0 10px;
+    
+}
+
+.bottom-bar {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        align-items: center; 
+    }
+    .social-media {
+        flex-direction: row; 
+        justify-content: center; 
+        
+    }
+}
+
+
